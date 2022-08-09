@@ -39,9 +39,8 @@ while True:
   except RuntimeError:
     pass   
 
- elif number == 2 :
-  import requests 
-
+ elif number == 2 : 
+  print("\nexample url :www.google.com\n")
   url=input("Enter the url: ")
   ht="https://"
   url1=ht+url
@@ -50,7 +49,7 @@ while True:
       response = requests.get(url1, verify=True)
       print("Ssl certified")
 
-  except requests.exceptions.SSLError:
+  except requests.exceptions.ConnectionError:
       print("Ssl not certified")
 
  elif number == 3 :
